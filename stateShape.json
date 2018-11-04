@@ -1,0 +1,13 @@
+{
+  "visibilityFilter": "SHOW_ACTIVE",
+  "todos": [
+    {
+      "text": "Obtain clothing",
+      "completed": true
+    },
+    {
+      "text": "Find Sarah Connor",
+      "completed": false
+    }
+  ]
+}

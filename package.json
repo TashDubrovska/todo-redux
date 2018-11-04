@@ -1,0 +1,61 @@
+{
+  "name": "todo-redux",
+  "version": "0.0.1",
+  "description": "ToDo React app using Redux",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config=jest.config.js --coverage",
+    "lint": "eslint --ext js --ext jsx --ignore-path .gitignore .",
+    "bundle": "rm -rf assets && parcel build index.js --out-dir ./assets"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/TashDubrovska/todo-redux.git"
+  },
+  "keywords": [
+    "react",
+    "redux"
+  ],
+  "author": "Nataliya Dubrovska",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TashDubrovska/todo-redux/issues"
+  },
+  "homepage": "https://github.com/TashDubrovska/todo-redux#readme",
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  },
+  "browserslist": [
+    "> 2%",
+    "last 2 version",
+    "not dead"
+  ],
+  "devDependencies": {
+    "acorn": "^6.0.2",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.27.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
+    "parcel-bundler": "^1.10.3",
+    "react-dom": "^16.6.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.6.0",
+    "react-redux": "^5.1.0",
+    "redux": "^4.0.1"
+  }
+}
