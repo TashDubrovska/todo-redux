@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './_style.scss';
 
 const Todo = ({ text, completed, onClick }) => (
   <li 
-    className={`todo__list__item${completed ? ' todo__list__item--completed' : ''}`} 
+    styleName={`todo${completed ? ' todo--completed' : ''}`} 
     onClick={onClick}
   >
     {text}

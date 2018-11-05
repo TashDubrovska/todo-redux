@@ -1,0 +1,15 @@
+.filterList {
+  display: flex;
+  list-style: none;
+  margin-bottom: 24px;
+  padding: 0;
+}
+
+.filterItem {
+  flex-grow: 1;
+  border-right: 1px solid #333;
+
+  &:last-child {
+    border: 0;
+  }
+}

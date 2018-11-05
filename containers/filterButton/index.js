@@ -3,7 +3,7 @@ import { setVisibilityFilter } from '../../actions';
 import Filter from '../../components/filter';
 
 const mapStateToProps = (state, ownProps) => ({
-  disabled: ownProps.filter === state.vsisibilityFilter,
+  disabled: ownProps.filter === state.visibilityFilter,
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

@@ -1,0 +1,21 @@
+@import '../../common/constants/styleVariables';
+
+.todo {
+  border-bottom: 1px solid $todo-list-borders;
+  cursor: pointer;
+  padding: 16px;
+  transition: background-color ease-in 0.3s;
+
+  &:last-child {
+    border: 0;
+  }
+
+  &:hover, &:focus {
+    background-color: $todo-hover;
+    transition: background-color ease-in 0.3s;
+  }
+}
+
+.todo--completed {
+  text-decoration: line-through;
+}

@@ -26,6 +26,35 @@
     "presets": [
       "env",
       "react"
+    ],
+    "plugins": [
+      [
+        "react-css-modules",
+        {
+          "generateScopedName": "[path][name]__[local]___[hash:base64:5]",
+          "filetypes": {
+            ".css": {
+              "syntax": "postcss-css"
+            },
+            ".scss": {
+              "syntax": "postcss-scss"
+            }
+          }
+        }
+      ]
+    ]
+  },
+  "postcss": {
+    "modules": true,
+    "plugins": {
+      "postcss-modules": {
+        "generateScopedName": "[path][name]__[local]___[hash:base64:5]"
+      }
+    }
+  },
+  "sass": {
+    "includePaths": [
+      "node_modules"
     ]
   },
   "browserslist": [
@@ -34,10 +63,11 @@
     "not dead"
   ],
   "devDependencies": {
-    "acorn": "^6.0.2",
+    "acorn": "^6.0.4",
     "babel": "^6.23.0",
     "babel-core": "^6.26.3",
     "babel-jest": "^23.6.0",
+    "babel-plugin-react-css-modules": "^3.4.2",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "enzyme": "^3.7.0",
@@ -45,12 +75,16 @@
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jest": "^21.27.0",
+    "eslint-plugin-jest": "^21.27.1",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "jest": "^23.6.0",
+    "node-sass": "^4.10.0",
+    "normalize.css": "^8.0.0",
     "parcel-bundler": "^1.10.3",
-    "react-dom": "^16.6.0"
+    "postcss-scss": "^2.0.0",
+    "react-dom": "^16.6.0",
+    "sass": "^1.14.3"
   },
   "dependencies": {
     "prop-types": "^15.6.2",

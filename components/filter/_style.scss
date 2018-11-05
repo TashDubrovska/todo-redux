@@ -1,0 +1,22 @@
+.filterButton {
+  border: 0;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  width: 90%;
+
+  &:after {
+    content: '';
+    bottom: 0;
+    border-bottom: 4px solid #333;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transition: transform ease-in-out .3s;
+    width: 100%;
+  }
+
+  &:disabled:after {
+    transform: scaleX(1);
+  }
+}

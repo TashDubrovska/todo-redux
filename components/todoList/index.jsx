@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Todo from '../todo';
+import './_style.scss';
 
 const TodoList = ({ todos, onTodoClick }) => (
-  <ul className='todo__list'>
+  <ul styleName={'todoList'}>
     {todos.map((todo, index) => (
       <Todo key={index} {...todo} onClick={() => onTodoClick(index) } />
     ))}

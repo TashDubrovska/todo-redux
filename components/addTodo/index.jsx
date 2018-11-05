@@ -2,13 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../../actions';
 import { format } from 'url';
+import './_style.scss';
 
 const AddTodo = ({ dispatch }) => {
   let input;
   const inputId = 'todo-text';
 
   return (
-    <form onSubmit={e => {
+    <form styleName='addTodoForm' onSubmit={e => {
       e.preventDefault();
       const inputValue = input.value.trim();
 
@@ -17,10 +18,10 @@ const AddTodo = ({ dispatch }) => {
         input.value = '';
       }
     }}>
-      <label htmlFor={inputId}>Todo</label>
-      <input type='text' id={inputId} ref={node => {input = node}} />
+      <label styleName='addTodoInputLabel' htmlFor={inputId}>Todo</label>
+      <input styleName='addTodoInput' type='text' id={inputId} ref={node => {input = node}} />
 
-      <button type='submit'>Add todo</button>
+      <button styleName='addTodoSubmit' type='submit'>Add todo</button>
     </form>
   )
 };
