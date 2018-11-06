@@ -4,3 +4,4 @@ assets
 views
 coverage
 .cache
+npm-debug.log
