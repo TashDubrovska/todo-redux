@@ -133,10 +133,9 @@ module.exports = {
   // testLocationInResults: false,
 
   // The glob patterns Jest uses to detect test files
-  // testMatch: [
-  //   '**/__tests__/**/*.js?(x)',
-  //   '**/?(*.)+(spec|test).js?(x)'
-  // ],
+  testMatch: [
+    `${__dirname}/src/**/test.js`,
+  ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [
@@ -160,8 +159,8 @@ module.exports = {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    '^.+\\.js$': 'babel-jest',
-    '^.+\\.jsx?$': 'babel-jest',
+    '^.+\\.(js|jsx)$': 'babel-jest',
+    '.+\\.(css|styl|less|sass|scss)$': 'jest-transform-css',
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation

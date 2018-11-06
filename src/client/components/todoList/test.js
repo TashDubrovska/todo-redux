@@ -26,7 +26,7 @@ describe('Todo component', () => {
   });
 
   test('should create a wrapper with correct class', () => {
-    expect(todoList.find('ul').hasClass('todo__list')).toBe(true);
+    expect(todoList.find('ul').prop('className')).toContain('todoList');
   });
 
   test('should render a correct number of todo items', () => {

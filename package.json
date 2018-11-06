@@ -4,9 +4,11 @@
   "description": "ToDo React app using Redux",
   "main": "index.js",
   "scripts": {
-    "test": "jest --config=jest.config.js --coverage",
+    "start": "npm run bundle && npm run open:server",
+    "open:server": "node ./src/server/index.js",
+    "test": "jest --config=./jest.js --coverage",
     "lint": "eslint --ext js --ext jsx --ignore-path .gitignore .",
-    "bundle": "rm -rf assets && parcel build index.js --out-dir ./assets"
+    "bundle": "rm -rf assets && parcel build ./src/client/index.js --out-dir ./assets"
   },
   "repository": {
     "type": "git",
@@ -79,6 +81,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "jest": "^23.6.0",
+    "jest-transform-css": "^2.0.0",
     "node-sass": "^4.10.0",
     "normalize.css": "^8.0.0",
     "parcel-bundler": "^1.10.3",
@@ -87,6 +90,9 @@
     "sass": "^1.14.3"
   },
   "dependencies": {
+    "compression": "^1.7.3",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
     "react-redux": "^5.1.0",

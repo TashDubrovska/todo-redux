@@ -24,7 +24,7 @@ describe('Todo component', () => {
   });
 
   test('should apply correct class if action is complete', () => {  
-    expect(todo.hasClass('todo__list__item--completed')).toBe(true);
+    expect(todo.prop('className')).toContain('todo--completed')
   });
 
   test('should not apply additional class if action is not complete', () => {
