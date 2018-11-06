@@ -1,6 +1,6 @@
 import React from 'react';
 import FilterList from '../filterList';
-import AddTodo from '../addTodo';
+import AddTodo from '../../containers/addTodo';
 import VisibleTodoList from '../../containers/visibleTodoList';
 import './_style.scss';
 

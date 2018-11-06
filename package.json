@@ -4,11 +4,12 @@
   "description": "ToDo React app using Redux",
   "main": "index.js",
   "scripts": {
-    "start": "npm run bundle && npm run open:server",
+    "start": "npm run build:views && npm run bundle && npm run open:server",
     "open:server": "node ./src/server/index.js",
     "test": "jest --config=./jest.js --coverage",
     "lint": "eslint --ext js --ext jsx --ignore-path .gitignore .",
-    "bundle": "rm -rf assets && parcel build ./src/client/index.js --out-dir ./assets"
+    "bundle": "rm -rf assets && parcel build ./src/client/index.js ./src/client/basePage.js --out-dir ./assets",
+    "build:views": "rm -rf views && babel src/client/basePage.js -d views"
   },
   "repository": {
     "type": "git",
@@ -67,6 +68,7 @@
   "devDependencies": {
     "acorn": "^6.0.4",
     "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-jest": "^23.6.0",
     "babel-plugin-react-css-modules": "^3.4.2",
@@ -90,6 +92,7 @@
     "sass": "^1.14.3"
   },
   "dependencies": {
+    "babel-register": "^6.26.0",
     "compression": "^1.7.3",
     "express": "^4.16.4",
     "morgan": "^1.9.1",
