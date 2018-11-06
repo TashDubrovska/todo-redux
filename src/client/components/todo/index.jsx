@@ -6,6 +6,7 @@ const Todo = ({ text, completed, onClick }) => (
   <li 
     styleName={`todo${completed ? ' todo--completed' : ''}`} 
     onClick={onClick}
+    tabIndex='0'
   >
     {text}
   </li>

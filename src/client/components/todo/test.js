@@ -23,6 +23,10 @@ describe('Todo component', () => {
     expect(todo.text()).toEqual(text);
   });
 
+  test('should make each todo focusable', () => {  
+    expect(todo.prop('tabIndex')).toEqual('0');
+  });
+
   test('should apply correct class if action is complete', () => {  
     expect(todo.prop('className')).toContain('todo--completed')
   });
