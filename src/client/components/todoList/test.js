@@ -19,10 +19,10 @@ describe('Todo component', () => {
     }
   ];
 
-  let todoList, onClickSpy;
+  let todoList;
 
   beforeEach(() => {
-    todoList = shallow(<TodoList todos={todos} onTodoClick={mockFunctions.onClick}/>);
+    todoList = shallow(<TodoList todos={todos} onTodoClick={mockFunctions.onClick} onDeleteClick={mockFunctions.onClick}/>);
   });
 
   test('should create a wrapper with correct class', () => {

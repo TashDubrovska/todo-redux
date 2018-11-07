@@ -1,28 +1,39 @@
 import * as actions from './index';
 
-test('creates correct data shape for add todo', () => {
-  const text = 'bake cookies';
+describe('Actions', () => {
+  test('should create correct data shape for add todo', () => {
+    const text = 'bake cookies';
 
-  expect(actions.addTodo(text)).toEqual({
-    type: actions.ADD_TODO,
-    text,
+    expect(actions.addTodo(text)).toEqual({
+      type: actions.ADD_TODO,
+      text,
+    });
   });
-});
 
-test('creates correct data shape for toggle todo', () => {
-  const index = 3;
+  test('should create correct data shape for remove todo', () => {
+    const index = 42;
 
-  expect(actions.toggleTodo(index)).toEqual({
-    type: actions.TOGGLE_TODO,
-    index,
+    expect(actions.removeTodo(index)).toEqual({
+      type: actions.REMOVE_TODO,
+      index,
+    });
   });
-});
 
-test('creates correct data shape for visibiliy filter setting', () => {
-  const filter = 'the claw';
+  test('should create correct data shape for toggle todo', () => {
+    const index = 3;
 
-  expect(actions.setVisibilityFilter(filter)).toEqual({
-    type: actions.SET_VISIBILITY_FILTER,
-    filter,
+    expect(actions.toggleTodo(index)).toEqual({
+      type: actions.TOGGLE_TODO,
+      index,
+    });
+  });
+
+  test('should create correct data shape for visibiliy filter setting', () => {
+    const filter = 'the claw';
+
+    expect(actions.setVisibilityFilter(filter)).toEqual({
+      type: actions.SET_VISIBILITY_FILTER,
+      filter,
+    });
   });
 });

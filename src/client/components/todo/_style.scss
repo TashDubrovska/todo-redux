@@ -1,8 +1,10 @@
 @import '../../common/constants/styleVariables';
 
 .todo {
+  align-items: center;
   border-bottom: 1px solid $todo-list-borders;
   cursor: pointer;
+  display: flex;
   padding: 16px;
   transition: background-color ease-in 0.3s;
 
@@ -18,4 +20,29 @@
 
 .todo--completed {
   text-decoration: line-through;
+}
+
+.todo__text {
+  flex-grow: 1;
+}
+
+.todo__delete {
+  &:before,
+  &:after {
+    content: '';
+    background: #333;
+    display: block;
+    height: 2px;
+    width: 20px;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+    top: -2px;
+    position: relative;
+  }
 }

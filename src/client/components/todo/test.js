@@ -4,23 +4,26 @@ import Todo from '.';
 
 describe('Todo component', () => {
   const mockFunctions = {
-    onClick: () => {}
+    onTodoClick: () => {},
+    onDeleteClick: () => {}
   };
   const text = 'Destroy half of the universe';
 
-  let todo, onClickSpy;
+  let todo, onTodoClickSpy, onDeleteClickSpy;
 
   beforeEach(() => {
-    onClickSpy = jest.spyOn(mockFunctions, 'onClick');
-    todo = shallow(<Todo text={text} completed={true} onClick={mockFunctions.onClick}/>);
+    onTodoClickSpy = jest.spyOn(mockFunctions, 'onTodoClick');
+    onDeleteClickSpy = jest.spyOn(mockFunctions, 'onDeleteClick');
+    todo = shallow(<Todo text={text} completed={true} onTodoClick={mockFunctions.onTodoClick} onDeleteClick={mockFunctions.onDeleteClick}/>);
   });
 
   afterEach(() => {
-    onClickSpy.mockRestore();
+    onTodoClickSpy.mockRestore();
+    onDeleteClickSpy.mockRestore();
   });
 
   test('should render supplied text', () => {  
-    expect(todo.text()).toEqual(text);
+    expect(todo.text()).toEqual(`${text}Delete`);
   });
 
   test('should make each todo focusable', () => {  
@@ -40,8 +43,14 @@ describe('Todo component', () => {
   });
 
   test('should call onClick function when todo is clicked', () => {
-    todo.simulate('click');
+    todo.find('div').simulate('click');
   
-    expect(onClickSpy).toBeCalled();
+    expect(onTodoClickSpy).toBeCalled();
+  });
+
+  test('should call onClick function when delete todo is clicked', () => {
+    todo.find('button').simulate('click');
+  
+    expect(onDeleteClickSpy).toBeCalled();
   });
 });
