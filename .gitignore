@@ -5,3 +5,4 @@ views
 coverage
 .cache
 npm-debug.log
+.vscode

@@ -6,8 +6,10 @@ import './_style.scss';
 
 export default () => (
   <div>
-    <h1 styleName={'mainHeader'}>Todo App</h1>
-    <AddTodo />
+    <div styleName='addTodo'>
+      <h1 styleName='mainHeader'>Todo App</h1>
+      <AddTodo />
+    </div>
     <FilterList />
     <VisibleTodoList />
   </div>

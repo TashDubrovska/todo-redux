@@ -18,10 +18,10 @@ const AddTodo = ({ dispatch }) => {
         input.value = '';
       }
     }}>
-      <label styleName='addTodoInputLabel' htmlFor={inputId}>Todo</label>
+      <label styleName='addTodoInputLabel' htmlFor={inputId}>What shall you do today? Remember - with great procrastination comes Netflix bingewatching.</label>
       <input styleName='addTodoInput' type='text' id={inputId} ref={node => {input = node}} />
 
-      <button styleName='addTodoSubmit' type='submit'>Add todo</button>
+      <button styleName='addTodoSubmit' type='submit'>Add</button>
     </form>
   )
 };

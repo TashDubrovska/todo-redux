@@ -2,12 +2,16 @@
 
 .addTodoForm {
   display: flex;
-  margin-bottom: 24px;
+  flex-wrap: wrap;
   width: 100%;
 }
 
 .addTodoInputLabel {
-  display: none;
+  color: $add-todo-subtext-colour;
+  flex-basis: 100%;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: $triple-spacing;
 }
 
 .addTodoInput {
@@ -18,10 +22,9 @@
 
 .addTodoSubmit {
   background-color: $add-todo-button-background;
-  border-color: $add-todo-button-background;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  color: $add-todo-button-colour;
+  color: $add-todo-button-text-colour;
   flex-basis: 20%;
   margin-left: -1px;
 }

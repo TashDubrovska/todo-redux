@@ -5,7 +5,6 @@
   border-bottom: 1px solid $todo-list-borders;
   cursor: pointer;
   display: flex;
-  padding: 16px;
   transition: background-color ease-in 0.3s;
 
   &:last-child {
@@ -24,13 +23,15 @@
 
 .todo__text {
   flex-grow: 1;
+  padding: 16px;
 }
 
 .todo__delete {
+  margin: 16px;
   &:before,
   &:after {
     content: '';
-    background: #333;
+    background: $todo-delete-button;
     display: block;
     height: 2px;
     width: 20px;

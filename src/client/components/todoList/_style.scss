@@ -1,8 +1,6 @@
 @import '../../common/constants/styleVariables';
 
 .todoList {
-  border: 1px solid $todo-list-borders;
-  border-radius: 3px;
   list-style: none;
   padding: 0;
 }

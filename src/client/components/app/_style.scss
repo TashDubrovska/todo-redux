@@ -1,6 +1,20 @@
+@import '../../common/constants/styleVariables';
+
+.addTodo {
+  background: $add-todo-background;
+  color: $add-todo-text-colour;
+  margin: 0;
+  padding: $default-spacing;
+
+  @media screen and (min-width: $tablet-portrait) {
+    padding: $default-spacing $triple-spacing $triple-spacing;
+  }
+}
+
 .mainHeader {
-  font-size: 2.2rem;
+  font-size: 3rem;
   font-weight: 400;
-  text-align: center;
+  margin: $double-spacing 0;
+  text-shadow: 2px 0 2px #000;
   text-transform: uppercase;
 }

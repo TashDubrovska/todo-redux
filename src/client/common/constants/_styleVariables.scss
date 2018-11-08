@@ -1,14 +1,28 @@
 // Colours
+$body-background-gradient-1: #e0f3fa;
+$body-background-gradient-2: #b6d2fd;
+
+$main-background: #FFF;
+
+$add-todo-background: #003e73;
+$add-todo-text-colour: #FFF;
+$add-todo-subtext-colour: #ffffffde;
+$add-todo-button-background: #002241;
+$add-todo-button-text-colour: #FFF;
+
 $todo-list-borders: #CCC;
 $todo-hover: #f9f9f9;
+$todo-delete-button: #333;
 
 $button-border: #CCC;
-
-$add-todo-button-background: #333;
-$add-todo-button-colour: #FFF;
 
 // Breakpoints
 $mobile: 320px;
 $tablet-portrait: 768px;
 $tablet-landscape: 1024px;
 $desktop: 1280px;
+
+// Spacing
+$default-spacing: 8px;
+$double-spacing: 16px;
+$triple-spacing: 24px;

@@ -2,6 +2,7 @@
 @import '../common/constants/styleVariables';
 
 body {
+  background: linear-gradient(135deg, $body-background-gradient-1 0%, $body-background-gradient-1 50%, $body-background-gradient-2 100%);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
 
@@ -11,19 +12,29 @@ body {
 }
 
 main {
-  padding: 8px;
+  background-color: $main-background;
+  margin: 0 auto;
 
   @media screen and (min-width: $tablet-landscape) {
     margin: 0 auto;
-    max-width: 800px;
-    padding: 16px;
+    max-width: 600px;
+  }
+
+  &:after {
+    content: '';
+    background-color: #003f71;
+    display: block;
+    height: $triple-spacing;
   }
 }
 
 button,
 input {
-  background: transparent;
-  border: 1px solid $button-border;
+  border: 0;
   border-radius: 3px;
-  padding: 16px;
+  padding: $double-spacing;
+}
+
+button{
+  background: transparent;
 }
